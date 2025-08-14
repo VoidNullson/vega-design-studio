@@ -1,0 +1,12 @@
+@import "tailwindcss";
+
+:root{
+  --gold:#C6A664;
+  --cyan-1:#00FFFF;
+  --cyan-2:#00BFFF;
+  --bg:#0B0B0B;
+  --ink:#FFFFFF;
+}
+
+html, body{ background: var(--bg); color: var(--ink); }
+.brand-gradient { background: linear-gradient(90deg, var(--cyan-1), var(--cyan-2)); -webkit-background-clip: text; background-clip:text; color:transparent; }
