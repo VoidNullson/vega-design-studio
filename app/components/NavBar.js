@@ -19,29 +19,26 @@ export default function NavBar() {
 							alt="Vega Design Studio"
 							className="h-10 w-auto hidden sm:block"
 						/>
-					<Link href="/" className="text-sm tracking-wide text-white">
-						{BRAND.name}
-					</Link>
+						<Link
+							href="/"
+							className="text-sm tracking-wide text-white"
+						>
+							{BRAND.name}
+						</Link>
 					</div>
 					<nav className="hidden md:flex items-center gap-6 text-sm text-neutral-300">
-						<a href="/" className="hover:text-white">
+						<Link href="/" className="hover:text-white">
 							Home
-						</a>
-						<a href="/work" className="hover:text-white">
+						</Link>
+						<Link href="/work" className="hover:text-white">
 							Work
-						</a>
-						<a
-							href="#/contact"
-							onClick={(e) => {
-								e.preventDefault();
-								document
-									.getElementById("contact")
-									?.scrollIntoView({ behavior: "smooth" });
-							}}
-							className="hover:text-white"
-						>
-							Contact
-						</a>
+						</Link>
+						<Link href="/services" className="hover:text-white">
+							Services
+						</Link>
+						<Link href="/about" className="hover:text-white">
+							About
+						</Link>
 					</nav>
 					<a
 						href="https://calendar.app.google/MCoM4jfg2dWgypC47"
