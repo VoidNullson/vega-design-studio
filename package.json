@@ -12,6 +12,7 @@
     "@ai-sdk/openai": "^2.0.22",
     "@ai-sdk/react": "^2.0.27",
     "@tailwindcss/typography": "^0.5.16",
+    "@vercel/analytics": "^1.5.0",
     "ai": "^5.0.27",
     "next": "15.4.6",
     "react": "19.1.0",

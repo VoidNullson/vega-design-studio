@@ -1,4 +1,5 @@
 import './globals.css';
+import { Analytics } from '@vercel/analytics/react';
 
 export const metadata = {
   title: 'Vega Design Studio',
@@ -19,9 +20,28 @@ export const metadata = {
   // }
 };
 export default function RootLayout({ children }) {
+  const jsonLd = {
+    "@context": "https://schema.org",
+    "@type": "Organization",
+    "name": "Vega Design Studio",
+    "url": "https://your-domain.com",
+    "logo": "https://your-domain.com/logos/logo-vega-wordmark.svg",
+    "sameAs": ["https://www.linkedin.com/company/your-handle"]
+  };
   return (
     <html lang="en">
-      <body className="bg-black text-white">{children}</body>
+      <body className="bg-black text-white">
+        <script type="application/ld+json" dangerouslySetInnerHTML={{ __html: JSON.stringify(jsonLd) }} />
+        {children}
+        <Analytics />
+      </body>
     </html>
   );
 }
+// export default function RootLayout({ children }) {
+//   return (
+//     <html lang="en">
+//       <body className="bg-black text-white">{children}</body>
+//     </html>
+//   );
+// }

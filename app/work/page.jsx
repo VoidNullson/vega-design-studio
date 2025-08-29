@@ -1,6 +1,7 @@
 'use client'
 import Link from "next/link";
 import Navbar from "../components/NavBar";
+import { useState } from "react";
 import { Container } from "../ui/elements";
 // import { PROJECTS } from "../../components/portfolioData";
 
@@ -66,6 +67,11 @@ const PROJECTS = [
 
 
 export default function WorkIndex() {
+  const [active, setActive] = useState("All");
+  const services = Array.from(new Set(PROJECTS.flatMap(p => p.services)));
+    const list = active === "All" ? PROJECTS : PROJECTS.filter(p => p.services.includes(active));
+  
+
   return (
     <div className="min-h-screen bg-black text-white">
       <Navbar />
@@ -76,8 +82,15 @@ export default function WorkIndex() {
             <h1 className="mt-1 text-3xl font-semibold">Selected Projects</h1>
           </div>
 
+          <div className="flex flex-wrap gap-2">
+              <button onClick={()=>setActive("All")} className={`rounded-full px-3 py-1.5 text-xs ${active==='All'?'bg-white text-black':'border border-white/20 text-white hover:border-white/40'}`}>All</button>
+              {services.map((s)=> (
+                <button key={s} onClick={()=>setActive(s)} className={`rounded-full px-3 py-1.5 text-xs ${active===s?'bg-white text-black':'border border-white/20 text-white hover:border-white/40'}`}>{s}</button>
+              ))}
+            </div>
+
           <div className="grid gap-8 sm:grid-cols-2 lg:grid-cols-3">
-            {PROJECTS.map((p) => (
+            {list.map((p) => (
               <article key={p.slug} className="group overflow-hidden rounded-2xl border border-white/10 bg-white/5">
                 <div className="relative h-48 w-full overflow-hidden">
                   <img src={p.img} alt={p.title} className="h-full w-full object-cover transition-transform duration-500 group-hover:scale-105" />
