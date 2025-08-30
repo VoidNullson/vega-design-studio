@@ -1,70 +1,12 @@
 'use client'
 import Link from "next/link";
+import Image from "next/image";
 import Navbar from "../components/NavBar";
 import { useState } from "react";
 import { Container } from "../ui/elements";
-// import { PROJECTS } from "../../components/portfolioData";
+import { PROJECTS } from "../information";
 
 const metadata = { title: "Work — Vega Design Studio" };
-const PROJECTS = [
-	{
-		slug: "celestia",
-		title: "Celestia — Luxury Brand System",
-		tag: "Brand Identity • Packaging • Web",
-		img: "https://images.unsplash.com/photo-1545239351-1141bd82e8a6?q=80&w=2000&auto=format&fit=crop",
-		hero: "https://images.unsplash.com/photo-1545239351-1141bd82e8a6?q=80&w=2400&auto=format&fit=crop",
-		blurb: "A lifestyle brand reimagined with a modern wordmark, cyan-accent palette, and scalable design system across packaging and web.",
-		challenge:
-			"Celestia needed to elevate their brand to compete with luxury labels while staying fresh and modern.",
-		solution:
-			"We created a sleek identity system, packaging, and a responsive site with a minimal, premium aesthetic.",
-		impact: "Unified aesthetic improved perceived value and recognition across channels.",
-		services: ["Brand Identity", "Design System", "Website"],
-	},
-	{
-		slug: "aurora-ai",
-		title: "Aurora AI — SaaS Web Platform",
-		tag: "Product Design • Next.js • AI Assistant",
-		img: "https://images.unsplash.com/photo-1526378722484-bd91ca387e72?q=80&w=2000&auto=format&fit=crop",
-		hero: "https://images.unsplash.com/photo-1526378722484-bd91ca387e72?q=80&w=2400&auto=format&fit=crop",
-		blurb: "A data visualization platform with a clean design language, fast UX, and an in-product AI assistant.",
-		challenge:
-			"Stand out in a crowded SaaS market and reduce onboarding friction.",
-		solution:
-			"We built a responsive Next.js app with clear IA and embedded an AI assistant for onboarding/support.",
-		impact: "Higher activation and smoother adoption measured in week-1 retention.",
-		services: ["Product Design", "Next.js", "AI Assistant"],
-	},
-	{
-		slug: "stellar",
-		title: "Stellar — Campaign & Landing System",
-		tag: "Creative Direction • Web • Email",
-		img: "https://images.unsplash.com/photo-1529336953121-ad5a5f57f2d7?q=80&w=2000&auto=format&fit=crop",
-		hero: "https://images.unsplash.com/photo-1529336953121-ad5a5f57f2d7?q=80&w=2400&auto=format&fit=crop",
-		blurb: "Multi-channel campaign with modular landing pages, ad creative, and AI-assisted email flows.",
-		challenge:
-			"Improve campaign performance and streamline asset production.",
-		solution:
-			"Crafted a modular landing system, ad kits, and AI-personalized email sequences.",
-		impact: "Lead conversions up ~35% on comparable spend.",
-		services: ["Creative Direction", "Landing Pages", "Email"],
-	},
-	{
-		slug: "marina-luxe",
-		title: "Marina Luxe Realty (Demo)",
-		tag: "Luxury Real Estate • AI Concierge",
-		img: "https://images.unsplash.com/photo-1460353581641-37baddab0fa2?q=80&w=2000&auto=format&fit=crop",
-		hero: "https://images.unsplash.com/photo-1460353581641-37baddab0fa2?q=80&w=2400&auto=format&fit=crop",
-		blurb: "High-end real estate concept with boutique aesthetics and an AI concierge.",
-		challenge:
-			"Demonstrate how AI can elevate lead qualification in luxury real estate.",
-		solution:
-			"Boutique, high-contrast UI with a 24/7 AI concierge for inquiries.",
-		impact: "Shows VDS’s AI-native approach for premium services.",
-		services: ["Brand", "Website", "AI Concierge"],
-	},
-];
-
 
 export default function WorkIndex() {
   const [active, setActive] = useState("All");
@@ -93,7 +35,7 @@ export default function WorkIndex() {
             {list.map((p) => (
               <article key={p.slug} className="group overflow-hidden rounded-2xl border border-white/10 bg-white/5">
                 <div className="relative h-48 w-full overflow-hidden">
-                  <img src={p.img} alt={p.title} className="h-full w-full object-cover transition-transform duration-500 group-hover:scale-105" />
+                  <Image src={p.img} alt={p.title} width={800} height={600} className="h-full w-full object-cover group-hover:scale-[1.03] transition" />
                   <div className="absolute left-3 top-3 rounded-full bg-black/70 px-3 py-1 text-xs text-white">{p.tag}</div>
                 </div>
                 <div className="p-5">
