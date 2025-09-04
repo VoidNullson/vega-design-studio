@@ -5,8 +5,8 @@ import { BRAND, BOOKING } from "@/information";
 
 export default function NavBar() {
 	return (
-		<header className="sticky top-0 z-40 border-b border-white/10 bg-black">
-			<Container>
+		<header className="sticky top-0 z-50 bg-black/80 backdrop-blur-sm border-b border-gray-800">
+			<div className="mx-auto px-4 sm:px-6 lg:px-8">
 				<div className="h-18 flex items-center justify-between">
 					<div className="flex items-center gap-3">
 						<img
@@ -14,16 +14,23 @@ export default function NavBar() {
 							alt="Vega Design Studio"
 							className="h-10 w-auto hidden sm:block"
 						/>
-						<img
+						{/* <img
 							src="/logo-vega-wordmark.png"
 							alt="Vega Design Studio"
 							className="h-10 w-auto hidden sm:block"
-						/>
+						/> */}
 						<Link
 							href="/"
-							className="text-sm tracking-wide text-white"
+							className="text-lg tracking-wide"
+							style={{
+								background:
+									"linear-gradient(90deg,#00FFFF,#00BFFF)",
+								WebkitBackgroundClip: "text",
+								backgroundClip: "text",
+								color: "transparent",
+							}}
 						>
-							{BRAND.name}
+							AI_ {BRAND.name}
 						</Link>
 					</div>
 					<nav className="hidden md:flex items-center gap-6 text-sm text-neutral-300">
@@ -52,7 +59,7 @@ export default function NavBar() {
 						Book a Consultation
 					</a>
 				</div>
-			</Container>
+			</div>
 		</header>
 	);
 }

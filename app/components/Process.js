@@ -5,22 +5,22 @@ import { Container
 			{
 				k: "01",
 				t: "Discovery",
-				d: "A 15-minute call to define goals, audience, and success metrics.",
+				d: "Define goals, audience, and success metrics.",
 			},
 			{
 				k: "02",
 				t: "Design Sprint",
-				d: "Rapid iterations on brand and layout; decisions in days, not weeks.",
+				d: "Rapid iterations on brand, design, and business solutions; Path plan in days, not weeks.",
 			},
 			{
 				k: "03",
 				t: "Build & QA",
-				d: "Next.js build, performance tuning, and device testing.",
+				d: "Build your solutions for review and approval",
 			},
 			{
 				k: "04",
 				t: "Launch & Grow",
-				d: "SEO, analytics, and optional AI + marketing add-ons.",
+				d: "Deploy you solutions. Monitor your retults. We offer support for all of our solutions.",
 			},
 		];
 		return (
@@ -31,7 +31,7 @@ import { Container
 							Process
 						</div>
 						<h2 className="mt-2 text-3xl font-semibold text-white">
-							Designed for speed and clarity
+							Developed with speed and clarity
 						</h2>
 					</div>
 					<div className="grid gap-6 sm:grid-cols-2 lg:grid-cols-4">

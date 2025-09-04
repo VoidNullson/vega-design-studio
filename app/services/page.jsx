@@ -6,7 +6,7 @@ export const metadata = { title: `Services — ${BRAND}` };
 
 const PACKAGES = [
   {
-    name: "Starter",
+    name: "Website and Hosting",
     blurb: "Brand refresh, one landing page, light AI (Artificial Intelligence) automation.",
     price: "from $2.5k",
     features: [
@@ -17,7 +17,7 @@ const PACKAGES = [
     ]
   },
   {
-    name: "Growth",
+    name: "E-commerce",
     blurb: "Multi-page site + design system + AI assistant.",
     price: "from $6k",
     features: [
@@ -28,7 +28,38 @@ const PACKAGES = [
     ]
   },
   {
-    name: "Flagship",
+    name: "AI Agent",
+    blurb: "Custom brand system + product UX (User Experience) + advanced AI workflows.",
+    price: "custom",
+    features: [
+      "Full brand system & guidelines",
+      "Custom Next.js build + CMS (Content Management System)",
+      "AI concierge + internal tooling",
+      "A/B (Split) testing & optimization"
+    ]
+  },
+  {
+    name: "Design and Branding",
+    blurb: "Custom brand system + product UX (User Experience) + advanced AI workflows.",
+    price: "custom",
+    features: [
+      "Full brand system & guidelines",
+      "Custom Next.js build + CMS (Content Management System)",
+      "AI concierge + internal tooling",
+      "A/B (Split) testing & optimization"
+    ]
+  },{
+    name: "Marketing and Ad Campains",
+    blurb: "Custom brand system + product UX (User Experience) + advanced AI workflows.",
+    price: "custom",
+    features: [
+      "Full brand system & guidelines",
+      "Custom Next.js build + CMS (Content Management System)",
+      "AI concierge + internal tooling",
+      "A/B (Split) testing & optimization"
+    ]
+  },{
+    name: "AI tools",
     blurb: "Custom brand system + product UX (User Experience) + advanced AI workflows.",
     price: "custom",
     features: [

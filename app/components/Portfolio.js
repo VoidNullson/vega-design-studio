@@ -7,10 +7,10 @@ export default function Portfolio() {
 			<Container>
 				<div className="mb-10 text-center">
 					<div className="uppercase tracking-[0.25em] text-[11px] text-neutral-400">
-						selected work
+						View our work
 					</div>
 					<h2 className="mt-2 text-3xl font-semibold text-white sm:text-4xl">
-						Where Creativity Meets Intelligence
+						When Creativity Meets Intelligence
 					</h2>
 					<p className="mx-auto mt-3 max-w-2xl text-neutral-300">
 						A showcase of how design, technology, and AI come

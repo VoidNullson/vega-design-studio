@@ -4,35 +4,36 @@ import { BOOKING } from '../information';
 export default function Pricing() {
 	const tiers = [
 		{
-			name: "One‑Week Sprint",
+			name: "Web Essentials",
 			price: "$2,500",
 			points: [
-				"3-page site",
-				"Logo refresh",
-				"Basic SEO",
-				"Launch assets",
+				"Modern Website with Advanced SEO",
+				"Design & Brand Kit",
+				"Marketing & Analytics",
+				"Online Presence Optimization",
 			],
 			cta: "Start a sprint",
 		},
 		{
-			name: "Growth Kit",
+			name: "Online Storefront",
 			price: "$4,500",
 			points: [
-				"5–7 page site",
-				"Brand kit",
-				"SEO + Analytics",
-				"30-day launch support",
+				"E-commerce site",
+				"Branding and Printed Material",
+				"Marketing and Ad Campaign",
+				"Site support",
 			],
 			cta: "Book discovery",
 		},
 		{
-			name: "AI Advantage",
+			name: "AI Agents and Tools",
 			price: "$2,500 + $299/mo",
 			points: [
-				"AI website chat",
-				"Listing writer",
-				"Market reports",
-				"Monthly content",
+        "Customer Service Representatives",
+				"Customer - Product Liaison",
+				"Task Workers",
+				"Content Writers",
+        "Save on man-hours with our limitless solutions",
 			],
 			cta: "Add AI",
 		},
@@ -45,18 +46,18 @@ export default function Pricing() {
 						Pricing
 					</div>
 					<h2 className="mt-2 text-3xl font-semibold text-white">
-						Clear packages, real outcomes
+						Bundle Examples
 					</h2>
 					<p className="mx-auto mt-2 max-w-2xl text-neutral-400">
-						Most projects close in 1–4 weeks. Payment plans
-						available.
+						Packages will be tailored to each business's needs.
+						Prices vary. Visit our Services page for general pricing. Payment plans are available.
 					</p>
 				</div>
 				<div className="grid gap-6 md:grid-cols-3">
 					{tiers.map((t, i) => (
 						<div
 							key={i}
-							className="rounded-2xl border border-white/10 bg-white/5 p-6"
+							className="relative flex h-full flex-col rounded-2xl border border-white/10 bg-white/5 p-6"
 						>
 							<div className="text-white">{t.name}</div>
 							<div className="mt-2 text-3xl font-semibold text-white">
@@ -71,7 +72,7 @@ export default function Pricing() {
 								href={BOOKING}
 								target="_blank"
 								rel="noopener"
-								className="mt-5 inline-block rounded-full bg-white px-4 py-2 text-sm font-semibold text-black hover:opacity-90"
+								className="mt-auto inline-block rounded-full bg-white py-2 text-sm font-semibold text-black hover:opacity-90 text-center"
 							>
 								{t.cta}
 							</a>

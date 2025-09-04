@@ -7,17 +7,17 @@ export function Hero() {
 			id="about"
 			className="relative isolate overflow-hidden bg-black"
 		>
-			<img
+			{/* <img
 				src="https://images.unsplash.com/photo-1500530855697-b586d89ba3ee?q=80&w=2000&auto=format&fit=crop"
 				alt="Minimal workspace"
 				className="absolute inset-0 h-full w-full object-cover opacity-10"
-			/>
+			/> */}
 			<Container>
 				<div className="pt-24 pb-16 sm:pt-28 sm:pb-24 max-w-3xl">
 					<p className="text-[11px] uppercase tracking-[0.25em] text-neutral-400">
 						{BRAND.city} • Design • Marketing • Web • AI
 					</p>
-					<h1 className="mt-3 text-4xl font-semibold text-white sm:text-5xl">
+					<h1 className="text-4xl sm:text-6xl md:text-5xl font-extrabold text-white tracking-tighter leading-tight">
 						<span
 							style={{
 								background:
@@ -32,7 +32,7 @@ export function Hero() {
 						— the future's North Star for Design & Innovation
 					</h1>
 					<p className="mt-4 text-neutral-300">
-						From branding and websites to AI-powered tools and
+						From Branding and Websites to AI-powered tools and
 						agents. We help businesses find what they're looking
 						for.
 					</p>

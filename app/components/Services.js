@@ -5,19 +5,19 @@ export default function Services() {
 	const items = [
 		{
 			t: "Brand & Identity",
-			d: "Logos, visual systems, and storytelling that position you with elegance and authority.Logos, typography, color systems, and brand kits designed to look premium and convert.",
+			d: "Premium identity and messaging that build trust and consistency across every touchpoint. Logos, brand kit, web/social templates.",
 		},
 		{
 			t: "Web & Digital Experiences",
 			d: "High-performance websites and apps designed for speed, scalability, and premium experience.",
 		},
 		{
-			t: "AI Integration",
-			d: "Practical AI assistants, automations, and content systems where they drive the most value.",
+			t: "AI Solutions",
+			d: "AI that pays for itself. Capture more leads, resolve questions faster, and remove repetitive work.",
 		},
 		{
-			t: "Launch Marketing",
-			d: "Social media, online advertisement, and analytics.",
+			t: "Marketing",
+			d: "Social Media Campaigns, Ads, and SEO that generate qualified leads.",
 		},
 	];
 	return (
