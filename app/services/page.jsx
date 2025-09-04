@@ -1,4 +1,3 @@
-import NavBar from "../components/NavBar";
 import { Container, Section, Card } from "../ui/elements";
 import JsonLd from "../components/JsonLd";
 import { BRAND, BOOKING } from "../information";
@@ -62,7 +61,6 @@ export default function ServicesPage() {
 
   return (
     <div className="min-h-screen bg-black text-white">
-      <NavBar />
       <Container>
         <Section>
           <h1 className="text-4xl font-semibold">Services</h1>

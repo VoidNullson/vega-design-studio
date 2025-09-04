@@ -1,4 +1,4 @@
-import { Container } from "../ui/elements";
+import { Container } from "@/ui/elements";
 
 export default function Footer() {
 	return (

@@ -6,7 +6,7 @@ export default function BeforeAfter({
 	after,
 	label,
 }) {
-  const sliderId = useId(); // ✅ stable id for SSR/CSR
+  const sliderId = useId(); 
 	const afterRef = useRef(null);
 	const [pct, setPct] = useState(50);
   const clip = `inset(0 0 0 ${pct}%)`;
@@ -26,7 +26,7 @@ export default function BeforeAfter({
 					src={after}
 					alt="after"
 					className="absolute inset-0 h-full w-full object-cover"
-					style={{ clipPath: `inset(0 0 0 ${pct}%)` }} // ✅ no DOM query
+					style={{ clipPath: `inset(0 0 0 ${pct}%)` }} 
 				/>
 				<label htmlFor={sliderId} className="sr-only">
 					Reveal

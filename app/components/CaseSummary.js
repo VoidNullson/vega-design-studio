@@ -1,4 +1,3 @@
-// components/CaseSummary.tsx
 export default function CaseSummary({
 	tag,
 	blurb,

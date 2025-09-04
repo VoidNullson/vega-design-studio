@@ -1,5 +1,5 @@
 
-import { Container } from "../ui/elements";
+import { Container } from "@/ui/elements";
 
 export default function Services() {
 	const items = [

@@ -1,5 +1,5 @@
-import { Container } from "../ui/elements";
-import { BRAND } from "../information";
+import { Container } from "@/ui/elements";
+import { BRAND } from "@/information";
 
 export function Hero() {
 	return (

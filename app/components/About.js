@@ -1,5 +1,5 @@
-import { Container } from "../ui/elements";
-import { BOOKING } from "../information";
+import { Container } from "@/ui/elements";
+import { BOOKING } from "@/information";
 
 export default function About() {
   return (
