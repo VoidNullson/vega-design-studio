@@ -1,11 +1,10 @@
 // "use client";
 import Image from "next/image";
 import Link from "next/link";
-import NavBar from "@/app/components/NavBar";
-import CaseSummary from "@/app/components/CaseSummary";
-import BeforeAfter from "@/app/ui/BeforeAfter";
-import { Container, CallToAction } from "@/app/ui/elements";
-import { PROJECTS } from "@/app/information";
+import CaseSummary from "@/components/CaseSummary";
+import BeforeAfter from "@/ui/BeforeAfter";
+import { Container, CallToAction } from "@/ui/elements";
+import { PROJECTS } from "@/information";
 
 // const BeforeAfter = dynamic(() => import("@/ui/BeforeAfter"), { ssr: false });
 
@@ -27,7 +26,6 @@ export default async function CasePage({ params }) {
   if (!project) {
     return (
       <div className="min-h-screen bg-black text-white">
-        <NavBar />
         <Container>
           <div className="pt-28">
             Not found. <Link href="/work" className="underline">Back to work</Link>
@@ -39,7 +37,6 @@ export default async function CasePage({ params }) {
 
   return (
     <div className="min-h-screen bg-black text-white">
-      <NavBar />
       <Container>
         <div className="pt-10 max-w-5xl">
           <Link href="/work" className="text-sm text-cyan-400 hover:underline">← Back to Work</Link>

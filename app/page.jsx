@@ -2,12 +2,10 @@
 import React, { useEffect, useState } from "react";
 import Portfolio from "./components/Portfolio"
 import { Hero } from "./components/Hero";
-import NavBar from "./components/NavBar"
 import Services from "./components/Services"
 import Pricing from "./components/Pricing";
 import Process from "./components/Process";
 import About from "./components/About";
-import Contact from "./components/Contact";
 import Footer from "./components/Footer";
 import Chatbot from "./components/Chatbot"
 // --- Shared ---
@@ -27,14 +25,12 @@ const BRAND = {
 export default function Home() {
   return (
     <div className="min-h-screen bg-black text-white">
-      <NavBar/>
       <Hero/>
       <Services/>
       <Pricing/>
       <Process/>
       <Portfolio/>
       <About/>
-      <Contact/>
       <Chatbot/>
       <Footer/>
       <div className="pointer-events-none fixed inset-0 -z-10 bg-gradient-to-b from-transparent via-transparent to-[rgba(0,255,255,0.08)]" />

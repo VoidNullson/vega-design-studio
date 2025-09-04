@@ -1,7 +1,6 @@
 'use client'
 import Link from "next/link";
 import Image from "next/image";
-import Navbar from "../components/NavBar";
 import { useState } from "react";
 import { Container } from "../ui/elements";
 import { PROJECTS } from "../information";
@@ -16,7 +15,6 @@ export default function WorkIndex() {
 
   return (
     <div className="min-h-screen bg-black text-white">
-      <Navbar />
       <div className="pt-10">
         <Container>
           <div className="mb-6">

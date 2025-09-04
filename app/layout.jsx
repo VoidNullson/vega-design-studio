@@ -1,5 +1,6 @@
 import './globals.css';
 import { Analytics } from '@vercel/analytics/react';
+import NavBar from './components/NavBar';
 
 export const metadata = {
   title: 'Vega Design Studio',
@@ -32,6 +33,7 @@ export default function RootLayout({ children }) {
     <html lang="en">
       <body className="bg-black text-white">
         <script type="application/ld+json" dangerouslySetInnerHTML={{ __html: JSON.stringify(jsonLd) }} />
+        <NavBar/>
         {children}
         <Analytics />
       </body>

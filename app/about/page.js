@@ -1,7 +1,6 @@
-import NavBar from "../components/NavBar";
-import { Container, Section } from "../ui/elements";
-import JsonLd from "../components/JsonLd";
-import { BRAND } from "../information";
+import { Container, Section } from "@/ui/elements";
+import JsonLd from "@/components/JsonLd";
+import { BRAND } from "@/information";
 
 export const metadata = { title: `About — ${BRAND}` };
 
@@ -16,7 +15,6 @@ export default function AboutPage() {
 
 	return (
 		<div className="min-h-screen bg-black text-white">
-			<NavBar />
 			<Container>
 				<Section>
 					<h1 className="text-4xl font-semibold">

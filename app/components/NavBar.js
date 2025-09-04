@@ -1,7 +1,7 @@
 'use client'
 import Link from "next/link";
-import { Container } from "../ui/elements";
-import { BRAND, BOOKING } from "../information";
+import { Container } from "@/ui/elements";
+import { BRAND, BOOKING } from "@/information";
 
 export default function NavBar() {
 	return (
@@ -39,9 +39,12 @@ export default function NavBar() {
 						<Link href="/about" className="hover:text-white">
 							About
 						</Link>
+						<Link href="/contact" className="hover:text-white">
+							Contact
+						</Link>
 					</nav>
 					<a
-						href="https://calendar.app.google/MCoM4jfg2dWgypC47"
+						href={BOOKING}
 						target="_blank"
 						rel="noopener"
 						className="rounded-full bg-white text-black px-4 py-1.5 text-sm font-medium hover:opacity-90"
