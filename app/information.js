@@ -1,6 +1,6 @@
 export const BOOKING = "https://calendar.app.google/MCoM4jfg2dWgypC47";
 export const BRAND = {
-	name: "Vega Design.Studio",
+	name: "VegaDesign.Studio",
   domain: "vegadesign.studio",
 	city: "Los Angeles",
 	gold: "#C6A664",
@@ -26,7 +26,7 @@ export const PROJECTS = [
 			"Shorter design-to-production cycles via systemized components",
 			"Higher perceived value in customer testing",
 		],
-		services: ["Brand Identity", "Design System", "Website"],
+		services: ["Brand", "Design", "Website"],
 		process: [
 			"Discovery & Competitive Audit",
 			"Visual Territory Exploration",
@@ -63,7 +63,7 @@ export const PROJECTS = [
 			"Fewer support tickets attributed to onboarding",
 			"Faster task completion in usability tests",
 		],
-		services: ["Product Design", "Next.js", "AI Assistant"],
+		services: ["Product Design", "AI Assistant"],
 		process: [
 			"Stakeholder Interviews & JTBD",
 			"IA & Navigation Model",
@@ -93,7 +93,7 @@ export const PROJECTS = [
 			"Lead conversions up ~35% on comparable spend",
 			"Time-to-launch reduced from weeks to days",
 		],
-		services: ["Creative Direction", "Landing Pages", "Email"],
+		services: ["Creative Direction", "SEO", "CRM"],
 		process: [
 			"Offer & Messaging Workshop",
 			"Funnel Mapping",

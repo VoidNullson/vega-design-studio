@@ -22,7 +22,7 @@ export default function WorkIndex() {
             <h1 className="mt-1 text-3xl font-semibold">Selected Projects</h1>
           </div>
 
-          <div className="flex flex-wrap gap-2">
+          <div className="mb-5 flex flex-wrap gap-2">
               <button onClick={()=>setActive("All")} className={`rounded-full px-3 py-1.5 text-xs ${active==='All'?'bg-white text-black':'border border-white/20 text-white hover:border-white/40'}`}>All</button>
               {services.map((s)=> (
                 <button key={s} onClick={()=>setActive(s)} className={`rounded-full px-3 py-1.5 text-xs ${active===s?'bg-white text-black':'border border-white/20 text-white hover:border-white/40'}`}>{s}</button>
