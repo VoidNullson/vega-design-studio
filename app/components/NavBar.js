@@ -30,7 +30,7 @@ export default function NavBar() {
 								color: "transparent",
 							}}
 						>
-							AI_ {BRAND.name}
+							{BRAND.name} | AI
 						</Link>
 					</div>
 					<nav className="hidden md:flex items-center gap-6 text-sm text-neutral-300">
