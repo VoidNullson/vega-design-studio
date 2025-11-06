@@ -6,7 +6,7 @@ import { BRAND, BOOKING } from "@/information";
 export default function NavBar() {
 	return (
 		<header className="sticky top-0 z-50 bg-black/80 backdrop-blur-sm border-b border-gray-800">
-			<div className="mx-auto px-4 sm:px-6 lg:px-8">
+			<div className="mx-auto px-4 sm:px-6 lg:px-5">
 				<div className="h-18 flex items-center justify-between">
 					<div className="flex items-center gap-3">
 						<img
@@ -50,14 +50,14 @@ export default function NavBar() {
 							Contact
 						</Link>
 					</nav>
-					<a
+            <a
 						href={BOOKING}
 						target="_blank"
 						rel="noopener"
-						className="rounded-full bg-white text-black px-4 py-1.5 text-sm font-medium hover:opacity-90"
-					>
-						Book a Consultation
-					</a>
+						className="rounded-full bg-white text-black px-4 py-1.5 text-sm font-medium hover:opacity-90 mx-2"
+            >
+						Book Consultation
+					  </a>
 				</div>
 			</div>
 		</header>

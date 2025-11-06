@@ -3,6 +3,8 @@ export const BRAND = {
 	name: "VegaDesign.Studio",
   domain: "vegadesign.studio",
 	city: "Los Angeles",
+  phone: "tel:+12132600620",
+  contactNum: "(213)260-0620",
 	gold: "#C6A664",
 	dark: "#0B0B0B",
 	mid: "#1A1A1A",

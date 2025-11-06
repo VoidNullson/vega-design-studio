@@ -27,6 +27,12 @@ export default function Chatbot() {
 	}
 	return (
 		<>
+			<a
+				href="tel:+12132600620"
+				className="bg-white text-black fixed bottom-3 left-5 z-50 flex items-center gap-2 rounded-full px-4 py-2 text-sm shadow-lg"
+			>
+				(213) 260-0620
+			</a>
 			<button
 				onClick={() => setOpen((v) => !v)}
 				className="fixed bottom-5 right-5 z-50 flex items-center gap-2 rounded-full px-4 py-2 text-sm shadow-lg"

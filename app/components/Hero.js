@@ -15,7 +15,7 @@ export function Hero() {
 			<Container>
 				<div className="pt-24 pb-16 sm:pt-28 sm:pb-24 max-w-3xl">
 					<p className="text-[11px] uppercase tracking-[0.25em] text-neutral-400">
-						{BRAND.city} • Design • Marketing • Web • AI
+						{BRAND.city} • Web • Design • Marketing • AI
 					</p>
 					<h1 className="text-4xl sm:text-6xl md:text-5xl font-extrabold text-white tracking-tighter leading-tight">
 						<span
