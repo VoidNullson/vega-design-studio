@@ -1,56 +1,62 @@
-import { Container
+import { Container } from "../ui/elements";
 
- } from "../ui/elements";export default function Process() {
-		const steps = [
-			{
-				k: "01",
-				t: "Discovery",
-				d: "Define goals, audience, and success metrics.",
-			},
-			{
-				k: "02",
-				t: "Design Sprint",
-				d: "Rapid iterations on brand, design, and business solutions; Path plan in days, not weeks.",
-			},
-			{
-				k: "03",
-				t: "Build & QA",
-				d: "Build your solutions for review and approval",
-			},
-			{
-				k: "04",
-				t: "Launch & Grow",
-				d: "Deploy you solutions. Monitor your retults. We offer support for all of our solutions.",
-			},
-		];
-		return (
-			<section className="bg-[color:var(--bg,#0b0b0b)] py-16">
-				<Container>
-					<div className="mb-8 text-center">
-						<div className="uppercase tracking-[0.25em] text-[11px] text-neutral-400">
-							Process
-						</div>
-						<h2 className="mt-2 text-3xl font-semibold text-white">
-							Developed with speed and clarity
-						</h2>
+export default function Process() {
+	const steps = [
+		{
+			k: "01",
+			t: "Discovery",
+			d: "Define goals, audience, and success metrics.",
+		},
+		{
+			k: "02",
+			t: "Design Sprint",
+			d: "Rapid iterations on brand, design, and business solutions. Path plan in days, not weeks.",
+		},
+		{
+			k: "03",
+			t: "Build & QA",
+			d: "Build your solutions for review and approval.",
+		},
+		{
+			k: "04",
+			t: "Launch & Grow",
+			d: "Deploy your solutions. Monitor your results. We offer support for all of our solutions.",
+		},
+	];
+	return (
+		<section className="py-20" style={{ background: 'var(--bg)' }}>
+			<Container>
+				<div className="mb-10 text-center">
+					<div className="section-label">
+						Process
 					</div>
-					<div className="grid gap-6 sm:grid-cols-2 lg:grid-cols-4">
-						{steps.map((s, i) => (
+					<h2 className="mt-2 text-3xl sm:text-4xl font-semibold text-white">
+						Developed with speed and clarity
+					</h2>
+				</div>
+				<div className="grid gap-5 sm:grid-cols-2 lg:grid-cols-4">
+					{steps.map((s, i) => (
+						<div
+							key={i}
+							className="glass-card p-6 relative"
+						>
 							<div
-								key={i}
-								className="rounded-2xl border border-white/10 bg-white/5 p-5"
+								className="text-3xl font-bold mb-2 brand-gradient"
+								style={{ fontFamily: 'var(--font-heading)', opacity: 0.5 }}
 							>
-								<div className="text-xs text-neutral-400">
-									{s.k}
-								</div>
-								<div className="mt-1 text:white">{s.t}</div>
-								<p className="mt-2 text-sm text-neutral-300">
-									{s.d}
-								</p>
+								{s.k}
 							</div>
-						))}
-					</div>
-				</Container>
-			</section>
-		);
- }
+							<div className="text-white font-medium">{s.t}</div>
+							<p className="mt-2 text-sm text-neutral-400 leading-relaxed">
+								{s.d}
+							</p>
+							{i < steps.length - 1 && (
+								<div className="hidden lg:block absolute top-1/2 -right-3 w-6 text-center text-neutral-600">→</div>
+							)}
+						</div>
+					))}
+				</div>
+			</Container>
+		</section>
+	);
+}

@@ -1,4 +1,5 @@
 import { useState } from "react";
+import { BRAND, BOOKING } from "@/information";
 
 export default function Chatbot() {
 	const [open, setOpen] = useState(false);
@@ -28,50 +29,53 @@ export default function Chatbot() {
 	return (
 		<>
 			<a
-				href="tel:+12132600620"
-				className="bg-white text-black fixed bottom-3 left-5 z-50 flex items-center gap-2 rounded-full px-4 py-2 text-sm shadow-lg"
+				href={BRAND.phone}
+				className="fixed bottom-3 left-5 z-50 flex items-center gap-2 rounded-full px-4 py-2 text-sm shadow-lg transition-all hover:scale-[1.02]"
+				style={{ background: 'linear-gradient(90deg, #00FFFF, #00BFFF)', color: '#000', fontWeight: 500 }}
 			>
-				(213) 260-0620
+				{BRAND.contactNum}
 			</a>
 			<button
 				onClick={() => setOpen((v) => !v)}
-				className="fixed bottom-5 right-5 z-50 flex items-center gap-2 rounded-full px-4 py-2 text-sm shadow-lg"
+				className="fixed bottom-5 right-5 z-50 flex items-center gap-2 rounded-full px-4 py-2 text-sm shadow-lg transition-all hover:scale-[1.02]"
 				style={{
 					background: open
 						? "rgba(0,0,0,0.85)"
 						: "linear-gradient(90deg,#00FFFF,#00BFFF)",
 					color: open ? "white" : "black",
+					border: open ? '1px solid rgba(255,255,255,0.1)' : 'none',
+					fontWeight: 500,
 				}}
 			>
 				{open ? "Close Chat" : "Vega AI"}
 			</button>
 			{open && (
-				<div className="fixed bottom-20 right-5 z-50 w-[92vw] max-w-sm overflow-hidden rounded-2xl border border-white/10 bg-[#0b0b0b] shadow-2xl">
-					<div className="flex items-center justify-between border-b border-white/10 bg-black/60 px-4 py-3">
+				<div className="fixed bottom-20 right-5 z-50 w-[92vw] max-w-sm overflow-hidden rounded-2xl border border-white/10 shadow-2xl" style={{ background: 'rgba(11,11,11,0.95)', backdropFilter: 'blur(16px)' }}>
+					<div className="flex items-center justify-between border-b border-white/[0.06] px-4 py-3">
 						<div className="text-sm font-medium text-white flex items-center gap-2">
 							<img
 								src="/logo-vega-agent.png"
 								alt="Vega"
 								className="h-6 w-4 rounded-full"
 							/>
-							{/* <span className="inline-block h-2 w-2 rounded-full" style={{ background: CYAN }} />  */}
 							Vega — AI Design Guide
 						</div>
 						<div className="flex items-center gap-2">
 							<a
-								href="https://calendar.app.google/MCoM4jfg2dWgypC47"
+								href={BOOKING}
 								target="_blank"
 								rel="noopener"
-								className="rounded-full bg-white px-2.5 py-1 text-[11px] font-medium text-black hover:opacity-90"
+								className="rounded-full px-2.5 py-1 text-[11px] font-medium text-black hover:opacity-90"
+								style={{ background: 'linear-gradient(90deg, #00FFFF, #00BFFF)' }}
 							>
 								Book
 							</a>
-							<span className="text-xs text-neutral-400">
+							<span className="text-xs text-neutral-500">
 								Online
 							</span>
 						</div>
 					</div>
-					<div className="max-h-80 space-y-2 overflow-y-auto bg-gradient-to-b from-transparent to-black/40 p-3">
+					<div className="max-h-80 space-y-2 overflow-y-auto p-3">
 						{messages.map((m, i) => (
 							<div
 								key={i}
@@ -82,24 +86,25 @@ export default function Chatbot() {
 								}`}
 							>
 								<div
-									className={`max-w-[80%] rounded-2xl px-4 py-2 text-sm shadow ${
+									className={`max-w-[80%] rounded-2xl px-4 py-2 text-sm ${
 										m.role === "assistant"
-											? "bg-white/10 text-white"
-											: "bg-white text-black"
+											? "bg-white/[0.06] text-white border border-white/[0.06]"
+											: "text-black"
 									}`}
+									style={m.role === "user" ? { background: 'linear-gradient(90deg, #00FFFF, #00BFFF)' } : {}}
 								>
 									{m.content}
 								</div>
 							</div>
 						))}
 					</div>
-					<div className="flex items-center gap-2 border-t border-white/10 bg-black/40 p-3">
+					<div className="flex items-center gap-2 border-t border-white/[0.06] p-3">
 						<input
 							value={input}
 							onChange={(e) => setInput(e.target.value)}
 							onKeyDown={(e) => e.key === "Enter" && send()}
 							placeholder="Ask about services, pricing, timelines…"
-							className="flex-1 rounded-xl border border-white/10 bg-black/50 px-3 py-2 text-sm text-white placeholder:text-neutral-500 focus:outline-none focus:ring-1 focus:ring-white/30"
+							className="flex-1 rounded-xl border border-white/[0.08] bg-white/[0.03] px-3 py-2 text-sm text-white placeholder:text-neutral-500 focus:outline-none focus:ring-1 focus:ring-cyan-400/30"
 						/>
 						<button
 							onClick={send}
